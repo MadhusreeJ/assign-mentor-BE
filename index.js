@@ -11,7 +11,7 @@ console.log("Webser running");
 app.use(cors("*"));
 app.use(express.json());
 
-const URL = "mongodb://localhost:27017";
+const URL = "mongodb+srv://sreemaddy18:5pfUPU0KGVwonsqL@cluster0.bnddi.mongodb.net/";
 
 //creating mentor
 app.post("/creatementor", async(req,res)=>{
