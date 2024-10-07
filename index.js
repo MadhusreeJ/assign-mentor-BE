@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const {MongoClient , ObjectId} = require("mongodb");
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config()
 
 const port = process.env.PORT || 3000;
 app.listen(port,()=>{
@@ -11,7 +13,7 @@ console.log("Webser running");
 app.use(cors("*"));
 app.use(express.json());
 
-const URL = "mongodb+srv://sreemaddy18:5pfUPU0KGVwonsqL@cluster0.bnddi.mongodb.net/";
+const URL = process.env.DB;
 
 //creating mentor
 app.post("/creatementor", async(req,res)=>{
